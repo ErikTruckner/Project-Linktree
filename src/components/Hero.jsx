@@ -18,6 +18,18 @@ const slides = [
     linkName: 'Dharmacakra',
     linkLink: 'https://www.youtube.com/@idharmacakra/',
   },
+  {
+    id: 2,
+    imageSrc: youtubeIcon,
+    linkName: 'Web 3D',
+    linkLink: 'https://www.youtube.com/@webddd/',
+  },
+  {
+    id: 3,
+    imageSrc: dcLogo,
+    linkName: 'Dharmacakra',
+    linkLink: 'https://www.youtube.com/@idharmacakra/',
+  },
 ]
 
 const Hero = (props) => {
@@ -51,13 +63,33 @@ const Hero = (props) => {
     },
     hidden: { opacity: 0, scale: 0 },
   }
-  const aboutVariants = {
+  const container = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, delay: 3.3 },
+      transition: {
+        staggerChildren: 0.4,
+        duration: 1,
+        delay: 3,
+        when: 'beforeChildren',
+        type: 'spring',
+        bounce: 0.5,
+        stiffness: 100,
+      },
     },
     hidden: { opacity: 0, scale: 0 },
+  }
+  const item = {
+    visible: {
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        bounce: 0.5,
+        stiffness: 100,
+        duration: 0.3,
+      },
+    },
+    hidden: { opacity: 0 },
   }
 
   const controls = useAnimation()
@@ -71,7 +103,9 @@ const Hero = (props) => {
 
   const Links = ({ id, imageSrc, linkName, linkLink }) => {
     return (
-      <div className='mt-10 w-[95%] lg:w-[70%] xl:w-[50%]  text-white py-3 px-2 hover-glowing-shadow-and-scale border rounded-lg text-center glass-background flex flex-col justify-center items-center'>
+      <motion.div
+        variants={item}
+        className='mt-10 w-[95%] lg:w-[70%] xl:w-[50%]  text-white py-3 px-2 hover-glowing-shadow-and-scale border rounded-lg text-center glass-background flex flex-col justify-center items-center'>
         <a className='' target='_blank' href={linkLink}>
           <div className=' flex flex-row justify-center items-center '>
             <img
@@ -82,7 +116,7 @@ const Hero = (props) => {
             <p className='text-2xl lg:text-5xl fredoka-font ml-4'>{linkName}</p>
           </div>
         </a>
-      </div>
+      </motion.div>
     )
   }
 
@@ -121,7 +155,7 @@ const Hero = (props) => {
               ref={ref}
               animate={controls}
               initial='hidden'
-              variants={aboutVariants}
+              variants={container}
               className='flex flex-col justify-start items-center '>
               {slides.map((slide) => (
                 <Links
