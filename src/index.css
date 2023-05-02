@@ -144,20 +144,21 @@ html body {
   box-shadow: 0px 0px 5px 5px rgba(223, 226, 252, 0.75);
   -webkit-box-shadow: 0px 0px 5px 5px rgba(223, 226, 252, 0.75);
   -moz-box-shadow: 0px 0px 5px 5px rgba(223, 226, 252, 0.75);
+  transition-duration: 500ms;
 }
 
 .hover-glowing-shadow-and-scale:hover {
   box-shadow: 0px 0px 20px 5px rgba(223, 226, 252, 0.75);
   -webkit-box-shadow: 0px 0px 20px 5px rgba(223, 226, 252, 0.75);
   -moz-box-shadow: 0px 0px 20px 5px rgba(223, 226, 252, 0.75);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .hover-glowing-shadow-and-scale:active {
   box-shadow: 0px 0px 20px 15px rgb(255, 255, 255);
   -webkit-box-shadow: 0px 0px 20px 15px rgba(255, 255, 255, 0.75);
   -moz-box-shadow: 0px 0px 20px 15px rgba(255, 255, 255, 0.75);
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 
 /*  */

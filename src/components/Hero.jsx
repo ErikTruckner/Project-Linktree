@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 
 import youtubeIcon from '../assets/youtube.png'
+import dcLogo from '../assets/dcLogo.png'
 
 const slides = [
   {
@@ -13,9 +14,9 @@ const slides = [
   },
   {
     id: 1,
-    imageSrc: youtubeIcon,
-    linkName: 'Web 3D',
-    linkLink: 'https://www.youtube.com/@webddd/',
+    imageSrc: dcLogo,
+    linkName: 'Dharmacakra',
+    linkLink: 'https://www.youtube.com/@idharmacakra/',
   },
 ]
 
@@ -73,7 +74,11 @@ const Hero = (props) => {
       <div className='mt-10 w-[95%] lg:w-[70%] xl:w-[50%]  text-white py-3 px-2 hover-glowing-shadow-and-scale border rounded-lg text-center glass-background flex flex-col justify-center items-center'>
         <a className='' target='_blank' href={linkLink}>
           <div className=' flex flex-row justify-center items-center '>
-            <img alt='youtube' src={imageSrc} className='w-[10%]' />
+            <img
+              alt='youtube'
+              src={imageSrc}
+              className='w-[5%] bg-white rounded-full'
+            />
             <p className='text-2xl lg:text-5xl fredoka-font ml-4'>{linkName}</p>
           </div>
         </a>
@@ -83,7 +88,7 @@ const Hero = (props) => {
 
   return (
     <section className='w-screen h-screen'>
-      <div className='relative w-screen h-[95%] mt-5 fredoka-font text-white border-4 border-blue-300 flex flex-col justify-start items-center '>
+      <div className='relative w-screen h-[95%] mt-5 fredoka-font text-white flex flex-col justify-start items-center '>
         {isLoaded ? (
           <>
             <motion.h1
