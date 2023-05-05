@@ -14,7 +14,7 @@ const slides = [
   },
   {
     id: 1,
-    imageSrc: dcLogo,
+    imageSrc: youtubeIcon,
     linkName: 'Dharmacakra',
     linkLink: 'https://www.youtube.com/@idharmacakra/',
   },
@@ -26,7 +26,7 @@ const slides = [
   },
   {
     id: 3,
-    imageSrc: dcLogo,
+    imageSrc: youtubeIcon,
     linkName: 'Dharmacakra',
     linkLink: 'https://www.youtube.com/@idharmacakra/',
   },
@@ -99,7 +99,7 @@ const Hero = (props) => {
     }
   }, [controls, inView])
 
-  const Links = ({ id, imageSrc, linkName, linkLink }) => {
+  const Links = ({ imageSrc, linkName, linkLink }) => {
     return (
       <div>
         <a className='' target='_blank' href={linkLink}>
