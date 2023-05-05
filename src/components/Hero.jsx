@@ -66,7 +66,6 @@ const Hero = (props) => {
   const container = {
     visible: {
       opacity: 1,
-      scale: 1,
 
       transition: {
         when: 'beforeChildren',
@@ -79,15 +78,15 @@ const Hero = (props) => {
         stiffness: 100,
       },
     },
-    hidden: { opacity: 0, scale: 0 },
+    hidden: { opacity: 0 },
   }
   const item = {
     visible: {
       opacity: 1,
-      scale: 1,
+
       type: 'spring',
     },
-    hidden: { opacity: 0, scale: 0 },
+    hidden: { opacity: 0 },
   }
 
   const controls = useAnimation()
