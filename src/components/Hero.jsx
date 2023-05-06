@@ -15,8 +15,8 @@ const slides = [
   {
     id: 1,
     imageSrc: youtubeIcon,
-    linkName: 'Dharmacakra',
-    linkLink: 'https://www.youtube.com/@idharmacakra/',
+    linkName: 'Web 3D',
+    linkLink: 'https://www.youtube.com/@webddd/',
   },
   {
     id: 2,
@@ -27,8 +27,8 @@ const slides = [
   {
     id: 3,
     imageSrc: youtubeIcon,
-    linkName: 'Dharmacakra',
-    linkLink: 'https://www.youtube.com/@idharmacakra/',
+    linkName: 'Web 3D',
+    linkLink: 'https://www.youtube.com/@webddd/',
   },
 ]
 
@@ -139,7 +139,7 @@ const Hero = (props) => {
               className=' mt-8 text-3xl mx-2 text-center'>
               I'm a{' '}
               <span className='hover-text-glow light-blue-text font-semibold '>
-                Multimedia
+                3D
               </span>{' '}
               Developer and Designer
               <br />
